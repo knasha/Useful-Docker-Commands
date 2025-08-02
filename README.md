@@ -20,7 +20,12 @@ This document lists useful Docker commands for managing containers, images, volu
   ```sh
   docker rm $(docker ps -aq)
   ```
-
+  
+- **Remove everything (volumes and containers):**
+  ```sh
+  docker rm -f $(docker ps -aq)
+  docker volume rm $(docker volume ls -q)
+  ```
 ---
 
 ## Images
